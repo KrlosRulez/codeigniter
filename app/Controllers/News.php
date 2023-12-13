@@ -14,7 +14,7 @@ class News extends BaseController
         $model = model(NewsModel::class);
 
         $data = [
-            'news'  => $model->getNews(),
+            'news' => $model->getNews(),
             'title' => 'News archive',
         ];
 
@@ -23,7 +23,8 @@ class News extends BaseController
             . view('templates/footer');
     }
 
-    public function new() {
+    public function new()
+    {
 
         helper('form');
 
@@ -32,22 +33,25 @@ class News extends BaseController
         if ($data['category'] = $model->findAll()) {
 
             return view('templates/header', ['title' => 'Create a news item'])
-            . view('news/create', $data)
-            . view('templates/footer');
+                . view('news/create', $data)
+                . view('templates/footer');
 
         }
-    
+
     }
 
-    public function create() {
+    public function create()
+    {
         helper('form');
 
         // Checks whether the submitted data passed the validation rules.
-        if (! $this->validate([
-            'title' => 'required|max_length[255]|min_length[3]',
-            'body'  => 'required|max_length[5000]|min_length[10]',
-            'id_category' => 'required',
-        ])) {
+        if (
+            !$this->validate([
+                'title' => 'required|max_length[255]|min_length[3]',
+                'body' => 'required|max_length[5000]|min_length[10]',
+                'id_category' => 'required',
+            ])
+        ) {
             // The validation fails, so returns the form.
             return $this->new();
         }
@@ -63,8 +67,8 @@ class News extends BaseController
 
         $model->save([
             'title' => $post['title'],
-            'slug'  => url_title($post['title'], '-', true),
-            'body'  => $post['body'],
+            'slug' => url_title($post['title'], '-', true),
+            'body' => $post['body'],
             'id_category' => $post['id_category'],
         ]);
 
@@ -73,7 +77,7 @@ class News extends BaseController
             . view('templates/footer');
     }
 
-    public function delete($id) 
+    public function delete($id)
     {
 
         if ($id == null) {
@@ -84,7 +88,7 @@ class News extends BaseController
 
         /*if ($model->where('id', $id)->find()) {
             $model->where('id', $id)->delete();
-        } else {
+        } else { lol
             throw new PageNotFoundException('Selected item does not exist in database');
         }*/
 
@@ -95,8 +99,8 @@ class News extends BaseController
         }
 
         return view('templates/header', ['title' => 'Delete item'])
-        . view('news/success_delete')
-        . view('templates/footer');
+            . view('news/success_delete')
+            . view('templates/footer');
 
     }
 
@@ -121,8 +125,8 @@ class News extends BaseController
         }
 
         return view('templates/header', $data)
-        . view('news/update')
-        . view('templates/footer');
+            . view('news/update')
+            . view('templates/footer');
 
     }
 
@@ -131,10 +135,12 @@ class News extends BaseController
 
         helper('form');
 
-        if (! $this->validate([
-            'title' => 'required|max_length[255]|min_length[3]',
-            'body' => 'required|max_length[5000]|min_length[10]'
-        ])) {
+        if (
+            !$this->validate([
+                'title' => 'required|max_length[255]|min_length[3]',
+                'body' => 'required|max_length[5000]|min_length[10]'
+            ])
+        ) {
             return $this->update($id);
         }
 
@@ -151,8 +157,8 @@ class News extends BaseController
         $model->save($data);
 
         return view('templates/header', ['title' => 'Item updated'])
-        . view('news/success_update')
-        . view('templates/footer');
+            . view('news/success_update')
+            . view('templates/footer');
 
     }
 
