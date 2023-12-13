@@ -1,0 +1,754 @@
+CRITICAL - 2023-12-13 08:52:37 --> Class 'Codeigniter\Model' not found
+in APPPATH/Models/CategoryModel.php on line 7.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 [internal function]: spl_autoload_call()
+ 6 SYSTEMPATH/Config/Factories.php(283): class_exists()
+ 7 SYSTEMPATH/Config/Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 8 SYSTEMPATH/Config/Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 9 SYSTEMPATH/Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+10 APPPATH/Controllers/News.php(30): model()
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->new()
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 08:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 08:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 08:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 08:54:19 --> CSRF token verified.
+ERROR - 2023-12-13 08:54:19 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(63): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 08:54:19 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(63): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 08:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 08:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:38:48 --> CSRF token verified.
+ERROR - 2023-12-13 10:38:48 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 10:38:48 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 10:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:42:50 --> CSRF token verified.
+INFO - 2023-12-13 10:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:42:54 --> CSRF token verified.
+ERROR - 2023-12-13 10:42:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 10:42:54 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 10:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 10:58:58 --> CSRF token verified.
+ERROR - 2023-12-13 10:58:58 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 10:58:58 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:03:25 --> CSRF token verified.
+ERROR - 2023-12-13 11:03:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:03:25 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(64): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:17:11 --> CSRF token verified.
+INFO - 2023-12-13 11:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:17:14 --> CSRF token verified.
+INFO - 2023-12-13 11:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:17:42 --> CSRF token verified.
+ERROR - 2023-12-13 11:17:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:17:42 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:19:40 --> CSRF token verified.
+ERROR - 2023-12-13 11:19:40 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:19:40 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:21:15 --> CSRF token verified.
+ERROR - 2023-12-13 11:21:15 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:21:15 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:22:37 --> CSRF token verified.
+ERROR - 2023-12-13 11:22:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:22:37 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:22:47 --> CSRF token verified.
+INFO - 2023-12-13 11:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:23:07 --> CSRF token verified.
+INFO - 2023-12-13 11:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-13 11:24:58 --> The action you requested is not allowed.
+in SYSTEMPATH/Security/Security.php on line 300.
+ 1 SYSTEMPATH/Security/Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(56): CodeIgniter\Security\Security->verify()
+ 3 SYSTEMPATH/Filters/Filters.php(186): CodeIgniter\Filters\CSRF->before()
+ 4 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:25:04 --> CSRF token verified.
+ERROR - 2023-12-13 11:25:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:25:04 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(66): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:26:11 --> CSRF token verified.
+INFO - 2023-12-13 11:26:11 --> Valor de id_category antes de guardar: 3
+ERROR - 2023-12-13 11:26:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:26:11 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:26:23 --> CSRF token verified.
+INFO - 2023-12-13 11:26:23 --> Valor de id_category antes de guardar: 3
+CRITICAL - 2023-12-13 11:26:28 --> The action you requested is not allowed.
+in SYSTEMPATH/Security/Security.php on line 300.
+ 1 SYSTEMPATH/Security/Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(56): CodeIgniter\Security\Security->verify()
+ 3 SYSTEMPATH/Filters/Filters.php(186): CodeIgniter\Filters\CSRF->before()
+ 4 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:26:34 --> CSRF token verified.
+INFO - 2023-12-13 11:26:34 --> Valor de id_category antes de guardar: 3
+CRITICAL - 2023-12-13 11:26:49 --> The action you requested is not allowed.
+in SYSTEMPATH/Security/Security.php on line 300.
+ 1 SYSTEMPATH/Security/Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(56): CodeIgniter\Security\Security->verify()
+ 3 SYSTEMPATH/Filters/Filters.php(186): CodeIgniter\Filters\CSRF->before()
+ 4 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:26:55 --> CSRF token verified.
+INFO - 2023-12-13 11:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:27:35 --> CSRF token verified.
+INFO - 2023-12-13 11:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:27:41 --> CSRF token verified.
+INFO - 2023-12-13 11:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:27:49 --> CSRF token verified.
+CRITICAL - 2023-12-13 11:28:41 --> The action you requested is not allowed.
+in SYSTEMPATH/Security/Security.php on line 300.
+ 1 SYSTEMPATH/Security/Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(56): CodeIgniter\Security\Security->verify()
+ 3 SYSTEMPATH/Filters/Filters.php(186): CodeIgniter\Filters\CSRF->before()
+ 4 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:28:47 --> CSRF token verified.
+CRITICAL - 2023-12-13 11:28:56 --> The action you requested is not allowed.
+in SYSTEMPATH/Security/Security.php on line 300.
+ 1 SYSTEMPATH/Security/Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(56): CodeIgniter\Security\Security->verify()
+ 3 SYSTEMPATH/Filters/Filters.php(186): CodeIgniter\Filters\CSRF->before()
+ 4 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:28:59 --> CSRF token verified.
+ERROR - 2023-12-13 11:28:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:28:59 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:31:11 --> CSRF token verified.
+ERROR - 2023-12-13 11:31:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:31:11 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:31:19 --> CSRF token verified.
+ERROR - 2023-12-13 11:31:19 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:31:19 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:34:47 --> CSRF token verified.
+ERROR - 2023-12-13 11:34:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:34:47 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:00 --> CSRF token verified.
+ERROR - 2023-12-13 11:35:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:35:00 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:36:06 --> CSRF token verified.
+ERROR - 2023-12-13 11:36:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:36:06 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:38:07 --> CSRF token verified.
+ERROR - 2023-12-13 11:38:07 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(72): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:38:07 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(72): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 11:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:41:48 --> CSRF token verified.
+INFO - 2023-12-13 11:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 11:41:50 --> CSRF token verified.
+ERROR - 2023-12-13 11:41:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(72): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 11:41:50 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(72): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 12:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:06:36 --> CSRF token verified.
+INFO - 2023-12-13 12:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:06:39 --> CSRF token verified.
+INFO - 2023-12-13 12:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:06:49 --> CSRF token verified.
+INFO - 2023-12-13 12:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:07:01 --> CSRF token verified.
+ERROR - 2023-12-13 12:07:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 12:07:02 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 12:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:09:35 --> CSRF token verified.
+ERROR - 2023-12-13 12:09:35 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE) in /var/www/html/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/codeigniter/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/codeigniter/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter/system/BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 /var/www/html/codeigniter/system/Model.php(715): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/codeigniter/system/BaseModel.php(698): CodeIgniter\Model->insert()
+#8 /var/www/html/codeigniter/app/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+#9 /var/www/html/codeigniter/system/CodeIgniter.php(942): App\Controllers\News->create()
+#10 /var/www/html/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-12-13 12:09:35 --> Cannot add or update a child row: a foreign key constraint fails (`ci4tutorial`.`news`, CONSTRAINT `news_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE)
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/News.php(68): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\News->create()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-13 12:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-13 12:10:53 --> CSRF token verified.
