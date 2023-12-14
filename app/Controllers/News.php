@@ -61,9 +61,6 @@ class News extends BaseController
 
         $model = model(NewsModel::class);
 
-        // print_r($post);
-        print_r($post['id_category']);
-
 
         $model->save([
             'title' => $post['title'],
@@ -88,7 +85,7 @@ class News extends BaseController
 
         /*if ($model->where('id', $id)->find()) {
             $model->where('id', $id)->delete();
-        } else { lol
+        } else { 
             throw new PageNotFoundException('Selected item does not exist in database');
         }*/
 
@@ -114,11 +111,13 @@ class News extends BaseController
         }
 
         $model = model(NewsModel::class);
+        $modelCategory = model(CategoryModel::class);
 
         if ($model->where('id', $id)->find()) {
             $data = [
                 'news' => $model->getById($id),
-                'title' => 'Update item'
+                'title' => 'Update item',
+                'category' => $modelCategory->findAll(),
             ];
         } else {
             throw new PageNotFoundException('Selected item does not exist in database');
@@ -138,7 +137,8 @@ class News extends BaseController
         if (
             !$this->validate([
                 'title' => 'required|max_length[255]|min_length[3]',
-                'body' => 'required|max_length[5000]|min_length[10]'
+                'body' => 'required|max_length[5000]|min_length[10]',
+                'id_category' => 'required',
             ])
         ) {
             return $this->update($id);
@@ -150,7 +150,8 @@ class News extends BaseController
             'id' => $id,
             'title' => $post['title'],
             'slug' => url_title($post['title'], '-', true),
-            'body' => $post['body']
+            'body' => $post['body'],
+            'id_category' => $post['id_category'],
         ];
 
         $model = model(NewsModel::class);

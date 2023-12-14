@@ -12,17 +12,23 @@ class NewsModel extends Model
 
     public function getNews($slug = false)
     {
-        if ($slug === false) {
-            $sql = $this->select('news.*,category.category');
-            $sql = $this->join('category', 'news.id_category=category.id');
-            $sql = $this->findAll();
-            return $sql;
-        }
+
         $sql = $this->select('news.*,category.category');
         $sql = $this->join('category', 'news.id_category=category.id');
-        $sql = $this->where(['slug' => $slug]);
-        $sql = $this->first();
+
+        if ($slug === false) {
+
+            $sql = $this->findAll();
+
+        } else {
+
+            $sql = $this->where(['slug' => $slug]);
+            $sql = $this->first();
+
+        }
+
         return $sql;
+
     }
 
     public function getById($id)
