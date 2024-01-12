@@ -1,25 +1,31 @@
-<h2><?= esc($title) ?></h2>
+<h2>
+    <?= esc($title) ?>
+</h2>
 
-<?php if (! empty($news) && is_array($news)): ?>
+<?php if (!empty($news) && is_array($news)): ?>
 
     <?php foreach ($news as $news_item): ?>
 
-        <h3><?= esc($news_item['title']) ?></h3>
+        <h3>
+            <?= esc($news_item['title']) ?>
+        </h3>
 
         <div class="main">
             <?= esc($news_item['body']) ?>
         </div>
-        <h4><?= esc($news_item['category']) ?></h4>
+        <h4>
+            <?= esc($news_item['category']) ?>
+        </h4>
         <p>
-            <a href="news/<?= esc($news_item['slug'], 'url') ?>">
+            <a href="news/<?= esc($news_item['slug'], 'url') ?>" class="btn btn-success">
                 View article
             </a>
             &nbsp;&nbsp;
-            <a href="news/del/<?= esc($news_item['id'], 'url') ?>">
+            <a href="news/del/<?= esc($news_item['id'], 'url') ?>" class="btn btn-danger">
                 Eliminar Noticia
             </a>
             &nbsp;&nbsp;
-            <a href="news/update/<?= esc($news_item['id'], 'url') ?>">
+            <a href="news/update/<?= esc($news_item['id'], 'url') ?>" class="btn btn-outline-primary">
                 Actualizar Noticia
             </a>
         </p>
