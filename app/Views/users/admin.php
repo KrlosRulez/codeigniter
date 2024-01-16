@@ -1,3 +1,5 @@
+<?php $session = session()?>
+<?= "Bienvenid@ ". $session->get('user')?>
 <?php if (!empty($user) && is_array($user)): ?>
     <?php foreach ($user as $get_user): ?>
         <h3>

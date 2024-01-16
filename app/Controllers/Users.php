@@ -44,12 +44,26 @@ class Users extends BaseController
         $post = $this->validator->getValidated();
         $model = model(UserModel::class);
         if ($data['user'] = $model->checkUser($post['username'], $post['password'])) {
+            
+            $session = session();
+            $session->set('user',$post['username']);
+            
             return view('templates/header', ['title' => 'Admin'])
                 . view('users/admin', $data)
                 . view('templates/footer');
         } else {
             return $this->loginForm("Error");
         }
+    }
+
+    public function closeSession()
+    {
+    $session = session();
+    //eliminar variable de sesion específica
+    $session->remove('user');
+    //eliminar toda la información de la sesion
+    $session->destroy();
+    return view('welcome_message');
     }
 
 }

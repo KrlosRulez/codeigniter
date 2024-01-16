@@ -175,4 +175,11 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+    /**
+     * --------------------------------------------------------------------------
+     * Sessions
+     * --------------------------------------------------------------------------
+     */
+    public $sessionDriver = 'Codeigniter\Session\Handlers\FileHandler';
 }

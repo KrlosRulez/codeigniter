@@ -25,6 +25,8 @@ $routes->get('news/(:segment)', [News::class, 'show']);
 
 $routes->get('categories', [Categories::class, 'index']);
 
+$routes->get('session', [Users::class, 'closeSession']); //Cerrar sesion
+
 $routes->get('admin', [Users::class, 'loginForm']); //Muestra formulario inicio sesión
 $routes->post('login', [Users::class, 'checkUser']); //Obtenemos user y pass
 

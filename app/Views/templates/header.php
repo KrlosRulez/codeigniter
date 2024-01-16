@@ -249,6 +249,14 @@
                 <li class="menu-item hidden"><a href="news">News</a></li>
                 <li class="menu-item hidden"><a href="admin">Admin</a></li>
                 <li class="menu-item hidden"><a href="categories">Categories</a></li>
+                
+                <?php
+                $session = session();
+                if (!empty($session->get( 'user'))):
+                ?>
+                <li class="menu-item hidden"><a href="session">Cerrar sesion</a></li>
+                <?php endif ?>
+                
                 <li class="menu-item hidden"><a href="https://codeigniter4.github.io/userguide/"
                         target="_blank">Docs</a>
                 </li>
